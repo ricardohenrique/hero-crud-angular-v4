@@ -1,4 +1,4 @@
-import { Component }   from '@angular/core';
+import { Component, ViewChild }   from '@angular/core';
 import { Hero }        from '../../hero';
 import { OnInit } from '@angular/core';
 import { HeroService } from '../../hero.service';
@@ -55,6 +55,7 @@ export class HeroesComponent implements OnInit{
           if (this.selectedHero === hero) { this.selectedHero = null; }
         });
   }
+
 
 }
 

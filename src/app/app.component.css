@@ -26,3 +26,59 @@ nav a:hover {
 nav a.active {
   color: #039be5;
 }
+md-grid-tile {
+  background: lightblue;
+}
+
+
+/*container-grid*/
+.container-grid{width: 100%;display: block;position: relative;height: 100%;}
+
+/*grid-navbar*/
+.container-grid .grid-navbar{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid #868686;
+}
+.container-grid .grid-sidebar{width: 10%;height: 100%;float: left;position: fixed;border-right: 1px solid #868686;}
+.container-grid .grid-sidebar.sidebar-large{width: 20%;}
+.container-grid .grid-content{position: relative;width: 80%;height: 100%;float: right;}
+
+/*container-content*/
+.container-content{position: relative;}
+
+/*navbar*/
+/*.navbar-container{position: absolute;}*/
+#repair-nav{
+    height: 65px;
+    position: relative;
+    margin-top: 0px;
+    display: block;
+}
+.navbar-container .account-icon {padding: 0 20px; font-size: 40px;margin-top: -10px;}
+.navbar-container .nav-spacer {flex: 1 1 auto;}
+
+/*sidenav*/
+.sidenav-container {width: 100%;height: 100%;background: none;position:absolute;}
+.sidenav-container .sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav-container .sidenav-content #nav-button {
+  top: 65px;
+  left: 0px;
+  position: absolute;
+  border: 1px solid #b1b1b1;
+  padding: 10px 20px;
+  min-width: auto;
+  margin: 5px;
+}
+
+/*.mat-sidenav-backdrop{display: none!important;}*/
+
+.sidenav-container .sidenav {padding: 20px;width: 100%;}

@@ -1,0 +1,16 @@
+<md-sidenav-container class="container-main">
+  <md-sidenav #sidenav class="sidenav" (open)="handleOnOpen($event)" opened="true">
+    <md-list>
+      <md-list-item><button md-button><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></button></md-list-item>
+      <md-list-item><button md-button><a routerLink="/heroes" routerLinkActive="active">Heroes</a></button></md-list-item>
+    </md-list>
+  </md-sidenav>
+
+  <div class="sidenav-content">
+    <button type="button" id="nav-button" md-button (click)="sidenav.open()">
+      <md-icon>apps</md-icon>
+    </button>
+    <h1>{{title}}</h1>
+    <router-outlet></router-outlet>    
+  </div>
+</md-sidenav-container>

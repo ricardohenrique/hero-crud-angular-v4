@@ -1,6 +1,71 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-  <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="container-grid">
+	<div class="grid-navbar">
+		<md-toolbar class="navbar-container">
+				<span>A R K</span>
+				<button type="button" id="nav-button" md-button (click)="handleOnOpen($event)">
+					<md-icon>apps</md-icon>
+				</button>
+				<span class="nav-spacer"></span>
+				<md-icon class="account-icon">account_circle</md-icon>
+		</md-toolbar>
+	</div>
+	<div id="repair-nav"></div>
+
+	<div class="grid-sidebar" [class.sidebar-large]="sidebarLarge">
+		<md-sidenav-container class="sidenav-container">
+			<md-sidenav #sidenav class="sidenav" (open)="handleOnOpen($event)" opened="true">
+				<md-list>
+					<md-list-item><button md-button><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></button></md-list-item>
+					<md-list-item><button md-button><a routerLink="/heroes" routerLinkActive="active">Heroes</a></button></md-list-item>
+				</md-list>
+			</md-sidenav>
+
+			<div class="sidenav-content">
+			</div>
+			
+		</md-sidenav-container>
+	</div>
+	
+	<div class="grid-content">
+		<div class="container-content">
+				<h1>{{title}}</h1>
+				<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>
+<!--<sidenav></sidenav>-->
+<!--<md-grid-list cols="2" layout-wrap>
+	<md-grid-tile>
+		<h1>OLA MUNDO</h1>
+		<ul>
+			<li>ola</li>
+			<li>ola</li>
+			<li>ola</li>
+			<li>ola</li>
+		</ul>
+	</md-grid-tile>
+	<md-grid-tile>
+		<ul>
+			<li>ola</li>
+			<li>ola</li>
+			<li>ola</li>
+			<li>ola</li>
+		</ul>
+	</md-grid-tile>
+	<md-grid-tile>
+		<ul>
+			<li>ola</li>
+			<li>ola</li>
+			<li>ola</li>
+			<li>ola</li>
+		</ul>
+	</md-grid-tile>
+	<md-grid-tile>
+		<ul>
+			<li>ola</li>
+			<li>ola</li>
+			<li>ola</li>
+			<li>ola</li>
+		</ul>
+	</md-grid-tile>
+</md-grid-list>-->
