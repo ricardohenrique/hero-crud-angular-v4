@@ -47,7 +47,7 @@ md-grid-tile {
 .container-grid .grid-content{position: relative;width: 80%;height: 100%;float: right;}
 
 /*container-content*/
-.container-content{position: relative;}
+.container-content{position: relative;padding: 15px;}
 
 /*navbar*/
 /*.navbar-container{position: absolute;}*/
@@ -57,8 +57,20 @@ md-grid-tile {
     margin-top: 0px;
     display: block;
 }
+.navbar-container{padding-left:0px;}
 .navbar-container .account-icon {padding: 0 20px; font-size: 40px;margin-top: -10px;}
 .navbar-container .nav-spacer {flex: 1 1 auto;}
+
+.navbar-container #nav-button {
+    top: 0px;
+    left: 0px;
+    border-right: 1px solid #868686;
+    padding: 14px 33px;
+    min-width: auto;
+    margin: 0px 0px;
+    border-radius: 0px;
+    margin-right: 15px;
+}
 
 /*sidenav*/
 .sidenav-container {width: 100%;height: 100%;background: none;position:absolute;}
@@ -69,15 +81,6 @@ md-grid-tile {
   justify-content: center;
 }
 
-.sidenav-container .sidenav-content #nav-button {
-  top: 65px;
-  left: 0px;
-  position: absolute;
-  border: 1px solid #b1b1b1;
-  padding: 10px 20px;
-  min-width: auto;
-  margin: 5px;
-}
 
 /*.mat-sidenav-backdrop{display: none!important;}*/
 /*.mat-list .mat-list-item .mat-list-item-content, .mat-nav-list .mat-list-item .mat-list-item-content{
@@ -97,6 +100,7 @@ md-grid-tile {
   border-bottom: 1px solid #b1b1b1;
   width: 100%;
   text-align: center;
+  margin-right: 0px;
 }
 .sidenav-container .sidenav .mat-list ul li button{
   /*border: 1px solid #868686;*/

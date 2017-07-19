@@ -1,28 +1,28 @@
 <div class="container-grid">
 	<div class="grid-navbar">
 		<md-toolbar class="navbar-container">
-				<span>A R K</span>
-				<button type="button" id="nav-button" md-button (click)="handleOnOpen($event)">
-					<md-icon>apps</md-icon>
-				</button>
-				<span class="nav-spacer"></span>
-				<md-icon class="account-icon">account_circle</md-icon>
+			<button type="button" id="nav-button" md-button (click)="handleOnOpen($event)">
+				<md-icon>apps</md-icon>
+			</button>
+			<span>A R K</span>
+			<span class="nav-spacer"></span>
+			<md-icon class="account-icon">account_circle</md-icon>
 		</md-toolbar>
 	</div>
 	<div id="repair-nav"></div>
 
-	<div class="grid-sidebar" [class.sidebar-large]="sidebarLarge" [@openClose]="stateExpression">
+	<div class="grid-sidebar" [class.sidebar-large]="sidebarLarge" [@openCloseSidebar]="stateSidebar">
 		<md-sidenav-container class="sidenav-container">
-			<md-sidenav #sidenav class="sidenav" (open)="handleOnOpen($event)" opened="true">
+			<md-sidenav #sidenav class="sidenav" opened="true">
 				<md-list>
 					<!--<md-list-item>-->
 						<!--<button md-button><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></button>-->
 						<ul>
 							<li>
-								<button md-icon-button [mdMenuTriggerFor]="menuUsers">
+								<button md-icon-button [mdMenuTriggerFor]="menuUsers" (onMenuOpen)="handleMenuOpen($event)">
 									<md-icon>people_outline</md-icon>
 								</button>
-								<md-menu #menuUsers="mdMenu">
+								<md-menu #menuUsers="mdMenu" xPosition="before">
 									<button md-menu-item>
 										<md-icon>supervisor_account</md-icon>
 										<span>Usuários</span>
@@ -62,7 +62,7 @@
 		</md-sidenav-container>
 	</div>
 	
-	<div class="grid-content">
+	<div class="grid-content" [@openCloseContent]="stateContent">
 		<div class="container-content">
 				<h1>{{title}}</h1>
 				<router-outlet></router-outlet>
