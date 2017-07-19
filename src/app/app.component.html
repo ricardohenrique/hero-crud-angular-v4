@@ -11,12 +11,48 @@
 	</div>
 	<div id="repair-nav"></div>
 
-	<div class="grid-sidebar" [class.sidebar-large]="sidebarLarge">
+	<div class="grid-sidebar" [class.sidebar-large]="sidebarLarge" [@openClose]="stateExpression">
 		<md-sidenav-container class="sidenav-container">
 			<md-sidenav #sidenav class="sidenav" (open)="handleOnOpen($event)" opened="true">
 				<md-list>
-					<md-list-item><button md-button><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></button></md-list-item>
-					<md-list-item><button md-button><a routerLink="/heroes" routerLinkActive="active">Heroes</a></button></md-list-item>
+					<!--<md-list-item>-->
+						<!--<button md-button><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></button>-->
+						<ul>
+							<li>
+								<button md-icon-button [mdMenuTriggerFor]="menuUsers">
+									<md-icon>people_outline</md-icon>
+								</button>
+								<md-menu #menuUsers="mdMenu">
+									<button md-menu-item>
+										<md-icon>supervisor_account</md-icon>
+										<span>Usuários</span>
+									</button>
+									<button md-menu-item>
+										<md-icon>add</md-icon>
+										<span>Novo</span>
+									</button>
+								</md-menu>
+							</li>
+					<!--</md-list-item>-->
+					<!--<md-list-item>-->
+						<!--<button md-button><a routerLink="/heroes" routerLinkActive="active">Heroes</a></button>-->
+						<li>
+							<button md-icon-button [mdMenuTriggerFor]="menu">
+								<md-icon>star_border</md-icon>
+							</button>
+							<md-menu #menu="mdMenu">
+								<button md-menu-item>
+									<md-icon>whatshot</md-icon>
+									<span>Herois</span>
+								</button>
+								<button md-menu-item>
+									<md-icon>add</md-icon>
+									<span>Novo</span>
+								</button>
+							</md-menu>
+						</li>
+						</ul>
+					<!--</md-list-item>-->
 				</md-list>
 			</md-sidenav>
 

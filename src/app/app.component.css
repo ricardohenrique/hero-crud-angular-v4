@@ -42,8 +42,8 @@ md-grid-tile {
   z-index: 2;
   border-bottom: 1px solid #868686;
 }
-.container-grid .grid-sidebar{width: 10%;height: 100%;float: left;position: fixed;border-right: 1px solid #868686;}
-.container-grid .grid-sidebar.sidebar-large{width: 20%;}
+.container-grid .grid-sidebar{width: 7%;height: 100%;float: left;position: fixed;border-right: 1px solid #868686;}
+/*.container-grid .grid-sidebar.sidebar-large{width: 20%;}*/
 .container-grid .grid-content{position: relative;width: 80%;height: 100%;float: right;}
 
 /*container-content*/
@@ -80,5 +80,30 @@ md-grid-tile {
 }
 
 /*.mat-sidenav-backdrop{display: none!important;}*/
-
-.sidenav-container .sidenav {padding: 20px;width: 100%;}
+/*.mat-list .mat-list-item .mat-list-item-content, .mat-nav-list .mat-list-item .mat-list-item-content{
+      width: 100%;
+    margin: 0 auto;
+    display: block;
+}*/
+.sidenav-container .sidenav {padding: 0px;width: 100%;}
+.sidenav-container .sidenav .mat-list .mat-list-item{width:100%;}
+.sidenav-container .sidenav .mat-list ul{
+    list-style: none;
+    padding: 0px;
+}
+.sidenav-container .sidenav .mat-list ul li{
+  display: table;
+  margin: 5px auto;
+  border-bottom: 1px solid #b1b1b1;
+  width: 100%;
+  text-align: center;
+}
+.sidenav-container .sidenav .mat-list ul li button{
+  /*border: 1px solid #868686;*/
+    border-radius: 0px;
+    color: #607d8b;
+    width: 100%;
+}
+.sidenav-container .sidenav .mat-list ul li button md-icon{
+  /*font-size: 30px;*/
+}
