@@ -89,25 +89,39 @@ md-grid-tile {
     display: block;
 }*/
 .sidenav-container .sidenav {padding: 0px;width: 100%;}
+.sidenav-container .sidenav .mat-list{padding-top:0px;}
 .sidenav-container .sidenav .mat-list .mat-list-item{width:100%;}
 .sidenav-container .sidenav .mat-list ul{
     list-style: none;
     padding: 0px;
+    margin: 0px;
 }
 .sidenav-container .sidenav .mat-list ul li{
   display: table;
-  margin: 5px auto;
+  margin: 0px auto;
   border-bottom: 1px solid #b1b1b1;
   width: 100%;
   text-align: center;
   margin-right: 0px;
+  padding: 0px 0px;
+  transition:all 0.2s;
+}
+.sidenav-container .sidenav .mat-list ul li:hover{
+  background-color: #ccc;
+  transition:all 0.2s;
 }
 .sidenav-container .sidenav .mat-list ul li button{
   /*border: 1px solid #868686;*/
     border-radius: 0px;
     color: #607d8b;
     width: 100%;
+    height: 70px;
 }
+
+:host >>> .sidenav-container .sidenav .mat-list ul li button .mat-button-ripple-round{
+  border-radius: 0px;
+}
+
 .sidenav-container .sidenav .mat-list ul li button md-icon{
   /*font-size: 30px;*/
 }
