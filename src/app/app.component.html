@@ -19,26 +19,30 @@
 						<!--<button md-button><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></button>-->
 						<ul>
 							<li>
-								<button md-icon-button [mdMenuTriggerFor]="menuUsers" (onMenuOpen)="handleMenuOpen($event)">
+								<button md-icon-button [mdMenuTriggerFor]="menuUsers" [class.sidebar-button]="sidebarLarge" (onMenuOpen)="handleMenuOpen($event)">
 									<md-icon>people_outline</md-icon>
 									<span class="sidenav-button-text" [@hiddenShowText]="sidebarButtonText">Usuários</span>
 								</button>
 								<md-menu #menuUsers="mdMenu" xPosition="before">
-									<button md-menu-item>
-										<md-icon>supervisor_account</md-icon>
-										<span>Usuários</span>
-									</button>
-									<button md-menu-item>
-										<md-icon>add</md-icon>
-										<span>Novo</span>
-									</button>
+									<a routerLink="/dashboard" routerLinkActive="active">
+										<button md-menu-item>
+											<md-icon>supervisor_account</md-icon>
+											<span>Usuários</span>
+										</button>
+									</a>
+									<a routerLink="/heroes" routerLinkActive="active">
+										<button md-menu-item>
+											<md-icon>add</md-icon>
+											<span>Novo</span>
+										</button>
+									</a>
 								</md-menu>
 							</li>
 					<!--</md-list-item>-->
 					<!--<md-list-item>-->
 						<!--<button md-button><a routerLink="/heroes" routerLinkActive="active">Heroes</a></button>-->
 						<li>
-							<button md-icon-button [mdMenuTriggerFor]="menu">
+							<button md-icon-button [mdMenuTriggerFor]="menu" [class.button-sidenav]="buttonSidenav" >
 								<md-icon>star_border</md-icon>
 								<span class="sidenav-button-text" [@hiddenShowText]="sidebarButtonText">Herois</span>
 							</button>
