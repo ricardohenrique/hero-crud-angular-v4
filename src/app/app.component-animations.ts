@@ -27,3 +27,19 @@ export function openCloseContent(){
         )
     ]);
 }
+
+export function hiddenShowText(){
+    return trigger("hiddenShowText", [
+        state('hidden', style({
+          // display: 'none',
+          opacity: 0,
+        })), 
+        state('show', style({
+          // display: 'block',
+          opacity: 1,
+        })),
+        transition(
+          'hidden <=> show', [animate(300)]
+        )
+    ]);
+}

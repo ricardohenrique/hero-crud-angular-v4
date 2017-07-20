@@ -123,5 +123,13 @@ md-grid-tile {
 }
 
 .sidenav-container .sidenav .mat-list ul li button md-icon{
-  /*font-size: 30px;*/
+    font-size: 35px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 25px;
+    left: 25px;
 }
+
+:host >>> .sidenav-container .sidenav .mat-list ul li button .sidenav-button-text{margin-left:30px;font-size: 16px;}
+/*:host >>> .sidenav-container .sidenav .mat-list ul li button .sidenav-button-text-visible{display: block!important;}*/

@@ -21,8 +21,9 @@
 							<li>
 								<button md-icon-button [mdMenuTriggerFor]="menuUsers" (onMenuOpen)="handleMenuOpen($event)">
 									<md-icon>people_outline</md-icon>
+									<span class="sidenav-button-text" [@hiddenShowText]="sidebarButtonText">Usuários</span>
 								</button>
-								<md-menu #menuUsers="mdMenu">
+								<md-menu #menuUsers="mdMenu" xPosition="before">
 									<button md-menu-item>
 										<md-icon>supervisor_account</md-icon>
 										<span>Usuários</span>
@@ -39,8 +40,9 @@
 						<li>
 							<button md-icon-button [mdMenuTriggerFor]="menu">
 								<md-icon>star_border</md-icon>
+								<span class="sidenav-button-text" [@hiddenShowText]="sidebarButtonText">Herois</span>
 							</button>
-							<md-menu #menu="mdMenu">
+							<md-menu #menu="mdMenu" xPosition="before">
 								<button md-menu-item>
 									<md-icon>whatshot</md-icon>
 									<span>Herois</span>
